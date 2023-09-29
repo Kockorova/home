@@ -1,0 +1,248 @@
+
+
+
+.main {
+  width: 100%;
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+
+.main__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Стили для заголовка */
+h2.title {
+  font-size: 24px;
+  font-weight: 400;
+  text-align: center;
+  color: #363534;
+  padding-bottom: 30px;
+}
+
+/* Галерея изображений */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: 10px;
+  justify-items: center;
+}
+
+.gallery img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+ 
+   object-fit: cover;
+   border-radius: 5px;
+}
+
+
+.gallery img:hover {
+  transform: scale(1.1);
+}
+
+/* Стили для заголовка */
+h2.title {
+  font-size: 40px;
+  font-weight: 400;
+  text-align: center;
+  line-height: 36px;
+  padding-bottom: 50px; /* Уменьшил немного отступ */
+  color: rgba(54, 52, 52, 1);
+}
+
+/* Стили для карусели */
+.carousel {
+    overflow-x: auto; 
+    -webkit-overflow-scrolling: touch; /* Добавим плавную прокрутку на устройствах с сенсорным экраном (iOS) */
+
+
+}
+
+/* Стили для галереи */
+.gallery__two {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+  padding-bottom: 30px;
+
+}
+
+/* Стили для полосы прокрутки в браузерах WebKit (Chrome и Safari) */
+.carousel::-webkit-scrollbar {
+  width: 100px;
+  background-color: #fdffc7e8;
+}
+
+.carousel::-webkit-scrollbar-thumb {
+  background-color: #66b17e;
+  border-radius: 6px;
+  max-width: -200px;
+}
+
+.carousel::-webkit-scrollbar-thumb:hover {
+  background-color: #7dae88;
+}
+
+/* Стили для карточки */
+.card {
+  flex: 0 0 calc(33.33% - 10px); /* Увеличил ширину карточки и уменьшил отступы */
+  box-shadow: 0 8px 12px rgba(84, 83, 66, 0.402);
+  /* overflow: hidden; */
+  margin: 0 5px; /* Добавлено небольшое горизонтальное расстояние между карточками */
+}
+
+.card-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.card-image:hover img {
+  transform: scale(1.1);
+}
+
+.image-caption {
+  background-color: rgb(59, 112, 55);
+  color: rgb(255, 255, 255);
+  padding: 10px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.card-image:hover .image-caption {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.image-caption span {
+  font-size: 20px; /* Уменьшил размер шрифта */
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.image-caption h2 {
+  font-size: 14px; /* Уменьшил размер шрифта */
+  font-weight: normal;
+}
+@media (max-width: 768px) {
+  .title {
+    font-size: 30px;
+    padding-bottom: 30px;
+  }
+
+  .gallery__two {
+    flex-wrap: wrap; /* Карточки будут переходить на следующую строку */
+    justify-content: center; /* Выравнивание карточек по центру */
+    gap: 15px;
+  }
+
+  .card {
+    flex: 0 0 calc(50% - 10px); /* Две карточки в ряд на мобильных устройствах */
+  }
+  
+  
+  
+  
+  
+  .image-caption span {
+    font-size: 18px; /* Уменьшаем размер шрифта */
+  }
+  
+  .image-caption h2 {
+    font-size: 12px; /* Уменьшаем размер шрифта */
+  }
+}
+
+/* Добавим стили для планшетов и небольших ноутбуков */
+@media (min-width: 769px) and (max-width: 1024px) {
+  h2.title {
+    font-size: 36px;
+    padding-bottom: 40px;
+  }
+
+  .gallery__two {
+    gap: 15px;
+  }
+  
+  .card {
+    flex: 0 0 calc(33.33% - 10px); /* Три карточки в ряд на планшетах */
+  }
+}
+
+/* Добавим стили для больших экранов */
+@media (min-width: 1025px) {
+  h2.title {
+    padding-bottom: 60px;
+  }
+
+  .gallery__two {
+    gap: 20px;
+  }
+
+  .card {
+    flex: 0 0 calc(25% - 20px);
+  }
+}
+
+/* Адаптивные стили */
+@media screen and (max-width: 768px) {
+  .main__container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  h2.title {
+    font-size: 20px;
+    padding-bottom: 20px;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 8px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .gallery {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 6px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+
+  .gallery__item {
+    flex: 0 0 40%;
+  }
+}
+
+
+
+@media screen and (max-width: 768px) {
+  .one { 
+    display: none;
+  }
+
+}
+
+
+@media screen and (max-width: 480px) {
+  .card {
+    flex: 0 0 20%;
+  }
+}
+
+
+
+
+
+

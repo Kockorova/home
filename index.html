@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="icon" href="./image/icon/logo-04 1.svg">
+    <title>Максимус конный клуб</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header__container container">
+            
+            <div class="header__logo">  
+            <a href="./index.html"><img src="./image/image_header/Ресурс 1 1.svg" alt=""></a>
+        </div>
+           <ul class="header__menu">
+                <li><a href="./pages/about us.html">О НАС</a></li>
+                <li><a href="./pages/services .html">УСЛУГИ</a></li>
+                <li><a href="./pages/photo albom.html">ФОТОАЛЬБОМ</a></li>
+                <li><a href="./pages/contacts.html">КОНТАКТЫ</a></li>
+                <div class="header__info ">
+                    <p class="header__number">+7 (000) 000-00-00</p>
+                    <p class="header__time"> Ежедневно 9:00 – 22:00</p>
+                </div>
+            </ul>
+            <div class="menu-icon"> 
+            <div class="top"></div>
+            <div class="middle"></div>
+            <div class="bottom"></div>
+            </div> 
+        </div> 
+    </header>
+    <section class="main">
+      <div class="main__container container">
+            <div class="main__media">   
+                <p class="main__title">Окунитесь в мир 
+                    лошадей вместе с нами</p>
+                <div> <br>
+                    <p class="main__subtitle">Уроки верховой езды, фотосессии и мероприятия
+                        в частном конном клубе г. Санкт-Петербург<span></span></p>
+                    <div>
+                        <br><br>
+                        <button  id="openModalButton" class="button">Записаться</button> 
+                        
+                    <div id="myModal" class="modal">
+                            <div class="modal-content">
+                              <span id="closeModalButton" class="close">&times;</span>
+                              <h2>Запись на занятие</h2>
+                              <p>Выберите дату и время для записи:</p>
+                             <form>
+                                <label for="date">Дата:</label>
+                                <input type="date" id="date" name="date" required>
+                                <br>
+                                <label for="time">Время:</label>
+                                <input type="time" id="time" name="time" required>
+                                <br>
+                                <input type="tel" id="phone" placeholder="Ваш телефон" 
+                                pattern="^\+7\s\(\d{3}\)\s\d{3}-\d{2}-\d{2}$"
+                                title="Введите корректный номер телефона в формате +7 (xxx) xxx-xx-xx" required>
+                                <input type="submit" value="Записаться">
+                     </div>       
+                             </form>
+                            </div>
+                        </div>
+                </div>
+              </div>
+        </div>
+    </section>
+ <script src="./jss/app.js"> </script>
+ <script src="./jss/index.js"> </script>
+
+
+    </body>
+    </html>
